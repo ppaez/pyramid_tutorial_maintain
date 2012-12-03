@@ -6,6 +6,48 @@ How to maintain the `Pyramid` tutorial files and their
 documentation synchronized when the corresponding scaffolds are
 modified.
 
+
+Organization
+============
+
+The files for the two wiki tutorials are located under
+`docs/tutorials/wiki` and `docs/tutorials/wiki2` in the
+`Pyramid` source directory.  The
+structure is this::
+
+ docs/tutorials/wiki/*.rst
+                     src/
+                         basiclayout/
+                         models/
+                         views/
+                         authorization/
+                         tests/
+
+The \*.rst files are the narrative documentation for the
+tutorial.
+
+The subfolders under src/ contain the source code files that
+make up the tutorial application.  These subfolders represent
+the state of the source code files at the end of a given stage
+of the tutorial.
+
+Each source code file may or may not change from one stage to
+the other.
+
+A \*.rst documentation file may list the content of one or more
+source files, by using a `literalinclude` Sphinx directive.
+That directive may include `lines` and/or `emphasize-lines`
+options.  The text after a source listing may contain references
+to specific lines in that listing.  For example: "line 2 imports
+the docutils module" or "lines 13-15 define a function".
+
+Thus, the tutorial narrative documentation might need to be
+updated when a tutorial source code file is modified.  If one or
+more lines are added or deleted in a source code file,
+a corresponding update might be needed in the `lines` and/or
+`emphasize-lines` options of a `literalinclude` Sphinx
+directive.
+
 Operation
 =========
 
