@@ -82,13 +82,26 @@ Operation
 Tools
 =====
 
-The following script opens vim with one tab for each file that
-changed, in the SQL and then the ZODB tutorial::
+Merge changes in scaffold vs basiclayout
+----------------------------------------
+
+The following script renders the alchemy and zodb scaffolds, it
+compares each file in the rendered scaffold against the
+corresponding file in the tutorial, and then opens vim with one
+tab for each file that has differences, in the SQL and then the
+ZODB tutorial::
 
  update-scaffolds
 
 Each tab shows the color diff of the file in the
 scaffold vs the corresponding file in the tutorial.
+
+Function keys are defined to move from one change to another
+`F5` and `F6`, to apply a change, `F8`, and to navigate the tabs,
+`F9` and `F12`.
+
+Merge changes across tutorial stages
+------------------------------------
 
 The following script will open vim with four tabs.
 Each tab shows the color diff of a given file from
@@ -97,6 +110,13 @@ a stage to the next one::
  update-file-by-stage '' <file-path>
 
  update-file-by-stage 2 <file-path>
+
+Function keys are defined to move from one change to another
+`F5` and `F6`, to apply a change, `F8`, and to navigate the tabs,
+`F9` and `F12`.
+
+Find references to source files
+-------------------------------
 
 The following Python 3 script lists the
 `literalinclude` references by file on each stage::
