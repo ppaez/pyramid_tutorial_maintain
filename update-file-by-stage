@@ -1,0 +1,26 @@
+#! /bin/bash
+
+echo Changes across stages for a tutorial
+
+echo -- project files
+
+file=$2
+echo $file
+echo ":tabnew docs/tutorials/wiki$1/src/models/$file" > scriptin
+echo ":vertical diffsplit docs/tutorials/wiki$1/src/basiclayout/$file" >> scriptin
+echo ":tabnew docs/tutorials/wiki$1/src/views/$file" >> scriptin
+echo ":vertical diffsplit docs/tutorials/wiki$1/src/models/$file" >> scriptin
+echo ":tabnew docs/tutorials/wiki$1/src/authorization/$file" >> scriptin
+echo ":vertical diffsplit docs/tutorials/wiki$1/src/views/$file" >> scriptin
+echo ":tabnew docs/tutorials/wiki$1/src/tests/$file" >> scriptin
+echo ":vertical diffsplit docs/tutorials/wiki$1/src/authorization/$file" >> scriptin
+echo ":tabclose 1" >> scriptin
+echo ":map <F5> [c" >> scriptin
+echo ":map <F6> ]c" >> scriptin
+echo ":map <F8> dp]c" >> scriptin
+echo ":map <F9> :diffupdate<CR>:tabprev<CR>" >> scriptin
+echo ":map <F12> :diffupdate<CR>:tabnext<CR>" >> scriptin
+echo ":set guitablabel=%N\ %t" >> scriptin
+vim -s scriptin
+
+echo End

@@ -1,0 +1,25 @@
+#! /bin/bash
+
+# render an SQLalchemy scaffold named tutorial
+python -c "from pyramid.scripts.pcreate import main;main(argv=['pcreate', '-s', 'alchemy','/tmp/alchemy/tutorial'])"
+
+# show the changes vs the existing basiclayout
+diff -rq docs/tutorials/wiki2/src/basiclayout/ /tmp/alchemy/tutorial/ | awk '/differ/ {print ":tabnew", $2; print ":vertical diffsplit", $4}' > scriptin ; echo ':tabclose 1' >> scriptin
+echo ':map <F5> [c' >> scriptin
+echo ':map <F6> ]c' >> scriptin
+echo ':map <F8> dp]c' >> scriptin
+echo ":map <F9> :tabprev<CR>" >> scriptin
+echo ":map <F12> :tabnext<CR>" >> scriptin
+vim -s scriptin
+
+# render a Zope DB scaffold named tutorial
+python -c "from pyramid.scripts.pcreate import main;main(argv=['pcreate', '-s', 'zodb','/tmp/zodb/tutorial'])"
+
+# show the changes vs the existing basiclayout
+diff -rq docs/tutorials/wiki/src/basiclayout/ /tmp/zodb/tutorial/ | awk '/differ/ {print ":tabnew", $2; print ":vertical diffsplit", $4}' > scriptin ; echo ':tabclose 1' >> scriptin
+echo ':map <F5> [c' >> scriptin
+echo ':map <F6> ]c' >> scriptin
+echo ':map <F8> dp]c' >> scriptin
+echo ":map <F9> :tabprev<CR>" >> scriptin
+echo ":map <F12> :tabnext<CR>" >> scriptin
+vim -s scriptin
