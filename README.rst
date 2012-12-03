@@ -2,10 +2,18 @@
 Maintaining Pyramid tutorial files
 ==================================
 
-How to maintain the `Pyramid` tutorial files and their
-documentation synchronized when the corresponding scaffolds are
-modified.
+How to maintain the `Pyramid` tutorial source code files and
+their narrative documentation updated when one or more source
+code files are modified.
 
+This document is oriented to anyone contributing documentation
+or code enhancements to `Pyramid`.  If the changes affect the
+tutorials somehow, the following information will help the
+contributor to include any necessary updates to keep the
+tutorials up to date.
+
+A few tool scripts are also included to assist in the
+process, which may eventually be automated.
 
 Organization
 ============
@@ -47,6 +55,9 @@ more lines are added or deleted in a source code file,
 a corresponding update might be needed in the `lines` and/or
 `emphasize-lines` options of a `literalinclude` Sphinx
 directive.
+
+A source code file might need to be modified, either because
+a `Pyramid` scaffold or the API is modified.
 
 Operation
 =========
