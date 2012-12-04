@@ -34,7 +34,7 @@ structure is this::
 The \*.rst files are the narrative documentation for the
 tutorial.
 
-The subfolders under src/ contain the source code files that
+The subfolders under `src/` contain the source code files that
 make up the tutorial application.  These subfolders represent
 the state of the source code files at the end of a given stage
 of the tutorial.
@@ -54,10 +54,12 @@ updated when a tutorial source code file is modified.  If one or
 more lines are added or deleted in a source code file,
 a corresponding update might be needed in the `lines` and/or
 `emphasize-lines` options of a `literalinclude` Sphinx
-directive.
+directive.  The line references after the listing might also
+need modifications.
 
-A source code file might need to be modified, either because
-a `Pyramid` scaffold or the API is modified.
+A tutorial source code file might need to be modified because
+the `Pyramid` API or the corresponding scaffold file is
+modified.
 
 Operation
 =========
@@ -82,8 +84,8 @@ Operation
 Tools
 =====
 
-Merge changes in scaffold vs basiclayout
-----------------------------------------
+Merge changes in the scaffold
+-----------------------------
 
 The following script renders the alchemy and zodb scaffolds, it
 compares each file in the rendered scaffold against the
