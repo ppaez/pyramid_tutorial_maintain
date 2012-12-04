@@ -21,9 +21,12 @@ Organization
 The tutorial user will normally access the narrative
 HTML documentation that explains the steps to follow, which
 is organized in chapters.  Behind the scenes, we have
-a set of `reST` documentation files from which the HTML
+a set of `reST` documentation files, one \*.rst file
+per chapter, from which the HTML
 files are obtained, plus a set of source files that
-make up the tutorial application.
+are the tutorial application being developed.  There
+is a snapshot of the source files as expected to be at
+the end of each chapter where modifications are made.
 
 The files for the two wiki tutorials are located under
 `docs/tutorials/wiki` and `docs/tutorials/wiki2` in the
@@ -38,12 +41,9 @@ structure is this::
                          authorization/
                          tests/
 
-In the top level there are The \*.rst documentation files and
-`src/` contains the source code files.
-
-The subfolders under `src/` contain the source code files as expected
-to be at the end of a given chapter of the tutorial.  Some source files
-are modified in a given chapter.
+In the top level there are the \*.rst documentation files and
+`src/` contains the source code files, organized in subfolders that
+correspond to the chapters.
 
 A \*.rst documentation file may list the content of one or more
 source files by using a `literalinclude` Sphinx directive.
@@ -60,15 +60,17 @@ that listing.  For example: "line 2 imports the docutils module"
 or "lines 13-15 define a function".
 
 From time to time, a tutorial source code file might need to be
-modified because the `Pyramid` API or the corresponding scaffold
-file is modified.
+modified because the `Pyramid` API changes or the corresponding
+scaffold file is modified.
 
 When this happens, the tutorial narrative documentation might
 need to be updated.  If one or more lines are added or deleted
 in a source code file, a corresponding update might be needed in
 the `lines` and/or `emphasize-lines` options of
 a `literalinclude` Sphinx directive.  The line references after
-the listing might also need modifications.
+the listing might also need modifications.  Depending on the
+case, these modifications may need to be propagated to the
+source file in the snapshot for the next chapters.
 
 Operation
 =========
