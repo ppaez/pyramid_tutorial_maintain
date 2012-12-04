@@ -64,22 +64,39 @@ modified.
 Operation
 =========
 
-#. Update one or more files in the alchemy or
-   zodb scaffolds.
+If one or more files in the `alchemy` or `zodb` scaffolds are
+modified, those changes need to be applied into the tutorial
+initial files:
 
-#. For each updated file of a scaffold:
+#. Render that scaffold into a temporary area, using `tutorial`
+   as the project name.
 
-   #. Merge changes into the `basiclayout` stage of
-      the tutorial that uses that scaffold.
+#. Compare the rendered scaffold folder  against the `basiclayout`
+   folder of the corresponding tutorial path.
 
-   #. For each of the `models`, `views`, `authorization`
-      and `tests` stages:
+#. For each updated file of the scaffold:
 
-      #. Merge changes in the file from the previous section
-         into that stage on the given tutorial.
-  
-      #. If one ore more lines added or deleted, ajust the
-         displayed and emphasized lines that are affected.
+   #. Merge the changes into the corresponding file in the
+      `basiclayout` folder.
+
+   #. If one ore more lines added or deleted, determine
+      if any displayed lines, emphasized lines, or line
+      references are affected, and adjust them in the
+      `basiclayout.rst` documentation file.
+
+   #. Compare with the corresponding file in the `models`
+      folder of the tutorial.
+
+   #. Merge the changes into the file in the `models`
+      folder.
+
+   #. If one ore more lines added or deleted, determine
+      if any displayed lines, emphasized lines, or line
+      references are affected, and adjust them in the
+      `definingmodels.rst` documentation file.
+
+   #. Repeat the last three steps for the `views`,
+      `authorization` and `tests` stages.
 
 Tools
 =====
