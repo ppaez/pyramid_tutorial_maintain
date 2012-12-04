@@ -131,6 +131,24 @@ initial files:
       updating the `definingviews.rst`, `authorization.rst`
       and `tests.rst` files if needed.
 
+Conventions
+===========
+
+- Use line numbers in code lisings with the `linenos` option,
+  except when listing a single line.
+
+- For a file that the user needs to edit:
+
+  - Before the listing, ask the user to modify a file: *Open
+    tutorial/tutorial/models.py file and edit it to look like
+    the following:*
+
+  - Use higlighting on the lines that are new or modified.
+
+  - After the listing, include this legend: *(The highlighted
+    lines are the ones that need to be changed.)*
+
+
 Tools
 =====
 
