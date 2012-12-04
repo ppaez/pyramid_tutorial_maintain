@@ -18,6 +18,11 @@ process, which may eventually be automated.
 Organization
 ============
 
+The tutorial user will normally access the narrative
+documentation that explains the steps to follow, which
+is organized in chapters.  Behind the scenes, we have
+a set of documentation files plus a set of source files.
+
 The files for the two wiki tutorials are located under
 `docs/tutorials/wiki` and `docs/tutorials/wiki2` in the
 `Pyramid` source directory.  The
@@ -36,18 +41,17 @@ tutorial.
 
 The subfolders under `src/` contain the source code files that
 make up the tutorial application.  These subfolders represent
-the state of the source code files at the end of a given stage
-of the tutorial.
-
-Each source code file may or may not change from one stage to
-the other.
+the state of the source code files at the end of a given chapter
+of the tutorial.  Some source files are modified in a given chapter.
 
 A \*.rst documentation file may list the content of one or more
 source files, by using a `literalinclude` Sphinx directive.
-That directive may include `lines` and/or `emphasize-lines`
-options.  The text after a source listing may contain references
-to specific lines in that listing.  For example: "line 2 imports
-the docutils module" or "lines 13-15 define a function".
+That directive may include a `lines` option to select specific
+lines to display.  It may also include a  `emphasize-lines`
+option to highlight some of the displayed lines.  The text after
+a source listing may contain references to specific lines in
+that listing.  For example: "line 2 imports the docutils module"
+or "lines 13-15 define a function".
 
 Thus, the tutorial narrative documentation might need to be
 updated when a tutorial source code file is modified.  If one or
