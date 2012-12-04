@@ -95,20 +95,25 @@ initial files:
       references are affected, and adjust them in the
       `definingmodels.rst` documentation file.
 
-   #. Repeat the last three steps for the `views`,
-      `authorization` and `tests` stages.
+   #. Repeat the last three steps for the corresponding file
+      in the `views`, `authorization` and `tests` folders,
+      updating the `definingviews.rst`, `authorization.rst`
+      and `tests.rst` files if needed.
 
 Tools
 =====
 
+Some of the steps described above can assisted by the following
+scripts.
+
 Merge changes in the scaffold
 -----------------------------
 
-The following script renders the alchemy and zodb scaffolds, it
-compares each file in the rendered scaffold against the
-corresponding file in the tutorial, and then opens vim with one
-tab for each file that has differences, in the SQL and then the
-ZODB tutorial::
+The following script renders the `alchemy` scaffold into
+a temporary path, it compares each file in the rendered scaffold
+against the corresponding file in the SQL tutorial, and then opens
+vim with one tab for each file that has differences between the
+rendered scaffold  and the SQL tutorial::
 
  update-scaffolds
 
@@ -119,14 +124,20 @@ Function keys are defined to move from one change to another
 `F5` and `F6`, to apply a change, `F8`, and to navigate the tabs,
 `F9` and `F12`.
 
+When vim is quit, the same process is repeated for the `zodb`
+scaffold.
+
 Merge changes across tutorial stages
 ------------------------------------
 
 The following script will open vim with four tabs.
 Each tab shows the color diff of a given file from
-a stage to the next one::
+a stage to the next one.  To display a file in the
+ZODB tutorial::
 
  update-file-by-stage '' <file-path>
+
+To display a file in the SQL tutorial::
 
  update-file-by-stage 2 <file-path>
 
@@ -138,6 +149,11 @@ Find references to source files
 -------------------------------
 
 The following Python 3 script lists the
-`literalinclude` references by file on each stage::
+`literalinclude` references by file on each stage.  To
+do this for the ZODB tutorial::
 
  src2rst.py
+
+To work on the SQL tutorial::
+
+ src2rst.py 2
