@@ -19,9 +19,11 @@ Organization
 ============
 
 The tutorial user will normally access the narrative
-documentation that explains the steps to follow, which
+HTML documentation that explains the steps to follow, which
 is organized in chapters.  Behind the scenes, we have
-a set of documentation files plus a set of source files.
+a set of `reST` documentation files from which the HTML
+files are obtained, plus a set of source files that
+make up the tutorial application.
 
 The files for the two wiki tutorials are located under
 `docs/tutorials/wiki` and `docs/tutorials/wiki2` in the
@@ -36,34 +38,37 @@ structure is this::
                          authorization/
                          tests/
 
-The \*.rst files are the narrative documentation for the
-tutorial.
+In the top level there are The \*.rst documentation files and
+`src/` contains the source code files.
 
-The subfolders under `src/` contain the source code files that
-make up the tutorial application.  These subfolders represent
-the state of the source code files at the end of a given chapter
-of the tutorial.  Some source files are modified in a given chapter.
+The subfolders under `src/` contain the source code files as expected
+to be at the end of a given chapter of the tutorial.  Some source files
+are modified in a given chapter.
 
 A \*.rst documentation file may list the content of one or more
-source files, by using a `literalinclude` Sphinx directive.
+source files by using a `literalinclude` Sphinx directive.
 That directive may include a `lines` option to select specific
-lines to display.  It may also include a  `emphasize-lines`
-option to highlight some of the displayed lines.  The text after
+lines to display.
+
+The `literalinclude` directive may also include a  `emphasize-lines`
+option to highlight some of the displayed lines.  This is used to
+show the user what lines are added or edited.
+
+To explain the user what some lines in the source do, the text after
 a source listing may contain references to specific lines in
 that listing.  For example: "line 2 imports the docutils module"
 or "lines 13-15 define a function".
 
-Thus, the tutorial narrative documentation might need to be
-updated when a tutorial source code file is modified.  If one or
-more lines are added or deleted in a source code file,
-a corresponding update might be needed in the `lines` and/or
-`emphasize-lines` options of a `literalinclude` Sphinx
-directive.  The line references after the listing might also
-need modifications.
+From time to time, a tutorial source code file might need to be
+modified because the `Pyramid` API or the corresponding scaffold
+file is modified.
 
-A tutorial source code file might need to be modified because
-the `Pyramid` API or the corresponding scaffold file is
-modified.
+When this happens, the tutorial narrative documentation might
+need to be updated.  If one or more lines are added or deleted
+in a source code file, a corresponding update might be needed in
+the `lines` and/or `emphasize-lines` options of
+a `literalinclude` Sphinx directive.  The line references after
+the listing might also need modifications.
 
 Operation
 =========
