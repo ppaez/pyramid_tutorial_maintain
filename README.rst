@@ -2,14 +2,15 @@
 Maintaining Pyramid tutorial files
 ==================================
 
-How to maintain the `Pyramid` tutorial source code files and
-their narrative documentation updated when one or more source
-code files are modified.
-
 This document is oriented to anyone contributing documentation
-or code enhancements to `Pyramid`.  If the changes affect the
+or code enhancements to the `Pyramid` web application framework.
+
+From time to time, some aspect of the `Pyramid` API might
+change or the `Pyramid` scaffold upon which the tutorial is
+based may be modified.
+If the changes affect the
 tutorials somehow, the following information will help the
-contributor to include any necessary updates to keep the
+contributor to keep the
 tutorials up to date.
 
 A few tool scripts are also included to assist in the
@@ -85,18 +86,16 @@ a source listing may contain references to specific lines in
 that listing.  For example: "line 2 imports the docutils module"
 or "lines 13-15 define a function".
 
-From time to time, a tutorial source code file might need to be
-modified because the `Pyramid` API changes or the corresponding
-scaffold file is modified.
-
-When this happens, the tutorial narrative documentation might
-need to be updated.  If one or more lines are added or deleted
-in a source code file, a corresponding update might be needed in
-the `lines` and/or `emphasize-lines` options of
+If a  tutorial source code file needs to be modified, the
+tutorial narrative documentation might need to be updated
+accordingly.  For example, if one or more lines are added or
+deleted in a source code file, a corresponding update might be
+needed in the `lines` and/or `emphasize-lines` options of
 a `literalinclude` Sphinx directive.  The line references after
 the listing might also need modifications.  Depending on the
 case, these modifications may need to be propagated to the
-source file in the snapshot for the next chapters.
+source file in the snapshot for the next chapters.  The
+following section explains this process.
 
 Operation
 =========
