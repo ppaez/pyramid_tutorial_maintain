@@ -68,6 +68,9 @@ correspond to the chapters.
 |                 |                            |          |             |          |          |          |          |             |          |
 +-----------------+----------------------------+----------+-------------+----------+----------+----------+----------+-------------+----------+
 
+The following files come from the scaffold but are not modified in the tutorial:
+`CHANGES.txt, development.ini, MANIFEST.in, production.ini, README.txt, setup.cfg`.
+
 A \*.rst documentation file may list the content of one or more
 source files by using a `literalinclude` Sphinx directive.
 That directive may include a `lines` option to select specific
