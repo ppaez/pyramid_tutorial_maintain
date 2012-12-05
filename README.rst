@@ -45,25 +45,25 @@ In the top level there are the \*.rst documentation files and
 `src/` contains the source code files, organized in subfolders that
 correspond to the chapters.
 
-+------------------------------+-----------------------+----------------------+
-|  Chapter                     +    Folder             |  Modified files      |
-+------------------------------+-----------------------+----------------------+
-| Basic Layout                 |   basiclayout/        |  None, files rendered|
-|                              |                       |  from a scaffold     |
-+------------------------------+-----------------------+----------------------+
-| Defining the Domain Model    |   models/             |  models.py           |
-|                              |                       |                      |
-+------------------------------+-----------------------+----------------------+
-| Defining Views               |   views/              |  views.py            |
-|                              |                       |  setup.py            |
-+------------------------------+-----------------------+----------------------+
-| Adding Authorization         |   authorization/      |  views.py            |
-|                              |                       |                      |
-|                              |                       |                      |
-+------------------------------+-----------------------+----------------------+
-| Adding Tests                 |   tests/              |  tests.py            |
-|                              |                       |                      |
-+------------------------------+-----------------------+----------------------+
++-----------------------+------------------------------+----------------------+
++    Folder             |  Chapter                     |  Modified files      |
++-----------------------+------------------------------+----------------------+
+|   basiclayout/        | Basic Layout                 |  None, files rendered|
+|                       |                              |  from a scaffold     |
++-----------------------+------------------------------+----------------------+
+|   models/             | Defining the Domain Model    |  models.py           |
+|                       |                              |                      |
++-----------------------+------------------------------+----------------------+
+|   views/              | Defining Views               |  views.py            |
+|                       |                              |  setup.py            |
++-----------------------+------------------------------+----------------------+
+|   authorization/      | Adding Authorization         |  views.py            |
+|                       |                              |                      |
+|                       |                              |                      |
++-----------------------+------------------------------+----------------------+
+|   tests/              | Adding Tests                 |  tests.py            |
+|                       |                              |                      |
++-----------------------+------------------------------+----------------------+
 
 A \*.rst documentation file may list the content of one or more
 source files by using a `literalinclude` Sphinx directive.
