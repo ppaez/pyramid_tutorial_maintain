@@ -44,7 +44,7 @@ structure is this::
 
 In the top level there are the \*.rst documentation files and
 `src/` contains the source code files, organized in subfolders that
-correspond to the chapters.
+correspond to the chapters as follows:
 
 +-----------------+----------------------------+---------------------------------------------------------------------------------------------+
 +  Folder         |  Chapter                   | Source files                                                                                |
