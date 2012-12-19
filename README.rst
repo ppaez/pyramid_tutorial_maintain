@@ -43,10 +43,10 @@ structure is this::
                          authorization/
                          tests/
 
-In the top level there are the \*.rst documentation files and the
-`src/` folder contains the source code files, organized in subfolders that
-correspond to their state at the end of each chapter.
-
+The documentation files are in the top level, the source files are
+duplicated in folders under the `src/` main folder.  Each folder
+contains modifications that are made in a chapter.  The following
+table summarizes the folder - chapter - modification correspondence:
 
 +-----------------+----------------------------+---------------------------------------------------------------------------------------------+
 +  Folder         |  Chapter                   | Source files                                                                                |
@@ -71,28 +71,27 @@ correspond to their state at the end of each chapter.
 |                 |                            |          |             |          |          |          |          |             |          |
 +-----------------+----------------------------+----------+-------------+----------+----------+----------+----------+-------------+----------+
 
-Some files that result from the scaffold are not modified in the tutorial:
-`CHANGES.txt, development.ini, MANIFEST.in, production.ini,
-README.txt, setup.cfg`.
+The files ``CHANGES.txt, development.ini, MANIFEST.in, production.ini,
+README.txt`` and ``setup.cfg`` that also result from the scaffold
+are not modified in the tutorial.
 
 If a source code file is modified, the modifications may need to
 be propagated to the snapshot for the next chapters.
 
 References
 ==========
-There are two ways that the documentation files refer to
-the tutorial source files:
+The documentation files refer to the tutorial source files in two
+ways:
 
 #. Listing the content of a source file by using a `literalinclude`
-   Sphinx directive.  This directive may include these options:
+   Sphinx directive, along with either of both of these options:
 
     - `lines` to select specific lines to display.
 
     - `emphasize-lines` to highlight the added or edited lines.
 
-#. Refer to specific lines in a listing, like "line 2 imports
-   the docutils module" or "lines 13-15 define a function", for
-   explanation.
+#. Refering to specific lines in a listing, like "line 2 imports
+   the docutils module" or "lines 13-15 define a function".
 
 If one or more lines are added or deleted in a source file, some
 line number references to that file in the documentation might
