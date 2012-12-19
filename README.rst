@@ -44,9 +44,12 @@ under a ``src/`` main folder::
                          authorization/
                          tests/
 
-Each folder contains modifications that are made to the source files
-in a chapter.  The following
-table summarizes the folder - chapter - modification correspondence:
+Each folder contains modifications that are made to some of the
+source files in a chapter.  The files ``CHANGES.txt, development.ini,
+MANIFEST.in, production.ini, README.txt`` and ``setup.cfg`` that
+result from the scaffold are not modified in the tutorial.
+The following table shows the folder - chapter correspondence
+and those files that are modified on each chapter:
 
 +-----------------+----------------------------+---------------------------------------------------------------------------------------------+
 +  Folder         |  Chapter                   | Source files                                                                                |
@@ -71,9 +74,6 @@ table summarizes the folder - chapter - modification correspondence:
 |                 |                            |          |             |          |          |          |          |             |          |
 +-----------------+----------------------------+----------+-------------+----------+----------+----------+----------+-------------+----------+
 
-The files ``CHANGES.txt, development.ini, MANIFEST.in, production.ini,
-README.txt`` and ``setup.cfg`` that also result from the scaffold
-are not modified in the tutorial.
 
 If a source code file is modified, the modifications may need to
 be propagated to the snapshot for the next chapters.
