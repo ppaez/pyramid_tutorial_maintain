@@ -19,17 +19,18 @@ process, which may eventually be automated.
 Organization
 ============
 
-The tutorial user will normally access the narrative
-HTML documentation that explains the steps to follow, which
-is organized in chapters.  Behind the scenes, we have
-a set of `reST` documentation files, one \*.rst file
-per chapter, from which the HTML
-files are obtained, plus a set of source files that
-are the tutorial application being developed.  There
-is a snapshot of the source files as expected to be at
-the end of each chapter where modifications are made.
+The tutorial user documentation in HTML, PDF, epub format is produced
+from two sets of files:
 
-The files for the two wiki tutorials are located under
+  - Documentation files.  They are `reST`, one \*.rst file
+    per chapter and they explain the source files.
+
+  - Source files. They are the tutorial application
+    being developed, and come from a `Pyramid`
+    scaffold produced by a ``pcreate -s zodb tutorial`` or
+    ``pcreate -s alchemy tutorial`` command.
+
+These files are located under
 `docs/tutorials/wiki` and `docs/tutorials/wiki2` in the
 `Pyramid` source directory.  The
 structure is this::
@@ -42,9 +43,10 @@ structure is this::
                          authorization/
                          tests/
 
-In the top level there are the \*.rst documentation files and
-`src/` contains the source code files, organized in subfolders that
-correspond to the chapters as follows:
+In the top level there are the \*.rst documentation files and the
+`src/` folder contains the source code files, organized in subfolders that
+correspond to their state at the end of each chapter.
+
 
 +-----------------+----------------------------+---------------------------------------------------------------------------------------------+
 +  Folder         |  Chapter                   | Source files                                                                                |
@@ -69,9 +71,6 @@ correspond to the chapters as follows:
 |                 |                            |          |             |          |          |          |          |             |          |
 +-----------------+----------------------------+----------+-------------+----------+----------+----------+----------+-------------+----------+
 
-The files listed in the ``basiclayout/`` row come from a `Pyramid`
-scaffold which is produced by a ``pcreate -s zodb tutorial`` or
-``pcreate -s alchemy tutorial`` command.
 Some files that result from the scaffold are not modified in the tutorial:
 `CHANGES.txt, development.ini, MANIFEST.in, production.ini,
 README.txt, setup.cfg`.
@@ -89,9 +88,7 @@ the tutorial source files:
 
     - `lines` to select specific lines to display.
 
-    - `emphasize-lines` to highlight some of the displayed
-      lines, to show the user what lines are added
-      or edited.
+    - `emphasize-lines` to highlight the added or edited lines.
 
 #. Refer to specific lines in a listing, like "line 2 imports
    the docutils module" or "lines 13-15 define a function", for
