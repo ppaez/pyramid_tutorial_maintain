@@ -1,6 +1,6 @@
-==================================
-Maintaining Pyramid tutorial files
-==================================
+=============================
+Maintaining Pyramid tutorials
+=============================
 
 This document is oriented to anyone contributing documentation
 or code enhancements to the `Pyramid` web application framework.
@@ -52,8 +52,8 @@ correspond to the chapters as follows:
 |                 |                            | setup.py | __init__.py | models.py| views.py | edit.pt  | login.pt | security.py | tests.py |
 |                 |                            |          |             |          |          | view.pt  |          |             |          |
 +-----------------+----------------------------+----------+-------------+----------+----------+----------+----------+-------------+----------+
-| basiclayout/    | Basic Layout               |            These files are freshly rendered             |          |             |          |
-|                 |                            |            from a `Pyramid` scaffold                    |          |             |          |
+| basiclayout/    | Basic Layout               | New      | New         | New      | New      |          |          |             | New      |
+|                 |                            |          |             |          |          |          |          |             |          |
 +-----------------+----------------------------+----------+-------------+----------+----------+----------+----------+-------------+----------+
 | models/         | Defining the Domain Model  | Modified |             | Modified |          |          |          |             |          |
 |                 |                            |          |             |          |          |          |          |             |          |
@@ -69,8 +69,12 @@ correspond to the chapters as follows:
 |                 |                            |          |             |          |          |          |          |             |          |
 +-----------------+----------------------------+----------+-------------+----------+----------+----------+----------+-------------+----------+
 
-The following files come from the scaffold but are not modified in the tutorial:
-`CHANGES.txt, development.ini, MANIFEST.in, production.ini, README.txt, setup.cfg`.
+The files listed in the ``basiclayout/`` row come from a `Pyramid`
+scaffold which is produced by a ``pcreate -s zodb tutorial`` or
+``pcreate -s alchemy tutorial`` command.
+Some files that result from the scaffold are not modified in the tutorial:
+`CHANGES.txt, development.ini, MANIFEST.in, production.ini,
+README.txt, setup.cfg`.
 
 A \*.rst documentation file may list the content of one or more
 source files by using a `literalinclude` Sphinx directive.
