@@ -22,7 +22,7 @@ Organization
 The tutorial user documentation in HTML, PDF, epub format is produced
 from two sets of files:
 
-  - Documentation files.  They are `reST`, one \*.rst file
+  - Documentation files.  They are `reST`, one ``.rst`` file
     per chapter and they explain the source files.
 
   - Source files. They are the tutorial application
@@ -31,9 +31,10 @@ from two sets of files:
     ``pcreate -s alchemy tutorial`` command.
 
 These files are located under
-`docs/tutorials/wiki` and `docs/tutorials/wiki2` in the
-`Pyramid` source directory.  The
-structure is this::
+``docs/tutorials/wiki`` and ``docs/tutorials/wiki2`` in the
+`Pyramid` source directory.  The documentation files are
+in the top level, the source files are duplicated in folders
+under a ``src/`` main folder::
 
  docs/tutorials/wiki/*.rst
                      src/
@@ -43,9 +44,8 @@ structure is this::
                          authorization/
                          tests/
 
-The documentation files are in the top level, the source files are
-duplicated in folders under the `src/` main folder.  Each folder
-contains modifications that are made in a chapter.  The following
+Each folder contains modifications that are made to the source files
+in a chapter.  The following
 table summarizes the folder - chapter - modification correspondence:
 
 +-----------------+----------------------------+---------------------------------------------------------------------------------------------+
