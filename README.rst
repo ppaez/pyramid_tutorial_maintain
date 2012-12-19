@@ -76,6 +76,9 @@ Some files that result from the scaffold are not modified in the tutorial:
 `CHANGES.txt, development.ini, MANIFEST.in, production.ini,
 README.txt, setup.cfg`.
 
+If a source code file is modified, the modifications may need to
+be propagated to the snapshot for the next chapters.
+
 References
 ==========
 There are two ways that the documentation files refer to
@@ -94,16 +97,9 @@ the tutorial source files:
    the docutils module" or "lines 13-15 define a function", for
    explanation.
 
-If a tutorial source code file needs to be modified, the references
-in the tutorial narrative documentation might need to be updated
-accordingly.  For example, if one or more lines are added or
-deleted in a source code file, a corresponding update might be
-needed in the `lines` and/or `emphasize-lines` options of
-a `literalinclude` Sphinx directive.  The line references after
-the listing might also need modifications.  Depending on the
-case, these modifications may need to be propagated to the
-source file in the snapshot for the next chapters.  The
-following section explains this process.
+If one or more lines are added or deleted in a source file, some
+line number references to that file in the documentation might
+need to be updated.
 
 Operation
 =========
