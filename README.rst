@@ -76,22 +76,26 @@ Some files that result from the scaffold are not modified in the tutorial:
 `CHANGES.txt, development.ini, MANIFEST.in, production.ini,
 README.txt, setup.cfg`.
 
-A \*.rst documentation file may list the content of one or more
-source files by using a `literalinclude` Sphinx directive.
-That directive may include a `lines` option to select specific
-lines to display.
+References
+==========
+There are two ways that the documentation files refer to
+the tutorial source files:
 
-The `literalinclude` directive may also include a  `emphasize-lines`
-option to highlight some of the displayed lines.  This is used to
-show the user what lines are added or edited.
+#. Listing the content of a source file by using a `literalinclude`
+   Sphinx directive.  This directive may include these options:
 
-To explain the user what some lines in the source do, the text after
-a source listing may contain references to specific lines in
-that listing.  For example: "line 2 imports the docutils module"
-or "lines 13-15 define a function".
+    - `lines` to select specific lines to display.
 
-If a  tutorial source code file needs to be modified, the
-tutorial narrative documentation might need to be updated
+    - `emphasize-lines` to highlight some of the displayed
+      lines, to show the user what lines are added
+      or edited.
+
+#. Refer to specific lines in a listing, like "line 2 imports
+   the docutils module" or "lines 13-15 define a function", for
+   explanation.
+
+If a tutorial source code file needs to be modified, the references
+in the tutorial narrative documentation might need to be updated
 accordingly.  For example, if one or more lines are added or
 deleted in a source code file, a corresponding update might be
 needed in the `lines` and/or `emphasize-lines` options of
