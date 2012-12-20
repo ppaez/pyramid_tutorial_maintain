@@ -22,13 +22,21 @@ Organization
 The tutorial user documentation in HTML, PDF, epub format is produced
 from two sets of files:
 
-  - Documentation files.  They are `reST`, one ``.rst`` file
-    per chapter and they explain the source files.
+  - Source files. They constitute the wiki web application
+    being developed.  Most files start from a `Pyramid`
+    scaffold created in the *Installation* chapter.
+    Five of those files are modified in subsequent tutorial
+    chapters.
+    Three files are created in the *Defining views*
+    and *Adding authorization* chapters.
 
-  - Source files. They are the tutorial application
-    being developed, and come from a `Pyramid`
-    scaffold produced by a ``pcreate -s zodb tutorial`` or
-    ``pcreate -s alchemy tutorial`` command.
+  - Documentation files.  They list the content of some of the
+    source files, highlighting the added or modified lines and
+    in some cases refering to specific line numbers in the
+    listing to explain them.  For example: "line 2 imports
+    the docutils module" or "lines 13-15 define a function".
+    They are in `reST` format and there is one ``.rst`` file
+    per chapter.
 
 These files are located under
 ``docs/tutorials/wiki`` and ``docs/tutorials/wiki2`` in the
@@ -45,7 +53,11 @@ under a ``src/`` main folder::
                          tests/
 
 Each folder contains modifications that are made to some of the
-source files in a chapter.  The files ``CHANGES.txt, development.ini,
+source files in a chapter.
+
+The scaffold is produced by a ``pcreate -s zodb tutorial`` or
+``pcreate -s alchemy tutorial`` command.
+The files ``CHANGES.txt, development.ini,
 MANIFEST.in, production.ini, README.txt`` and ``setup.cfg`` that
 result from the scaffold are not modified in the tutorial.
 The following table shows the folder - chapter correspondence
