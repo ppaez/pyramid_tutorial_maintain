@@ -126,7 +126,7 @@ The following example is from ``docs/tutorials/wiki2/definingviews.rst``::
 If an external change to ``src/views/tutorial/views.py`` adds a new
 line at the current line 8, the line
 number references 12 and 15-70 in the ``:emphasize-lines:`` option
-need to be added 1 like this::
+need to be incremented by 1 like this::
 
     :emphasize-lines: 1-7,13,16-71
 
@@ -145,8 +145,8 @@ This other example is from ``docs/tutorials/wiki2/authorization.rst``::
 If the external change to ``src/authorization/tutorial/__init__.py``
 adds a new line at the current lines 7 and 26,
 the line number references 7, 21-23 and 25- in the ``:emphasize-lines:``
-option need to be added 1, while the line number references -27 and
-30-31 need to be added 2 like this::
+option need to be incremented by 1, while the line number references -27 and
+30-31 need to be incremented by 2 like this::
 
     :emphasize-lines: 2-3,8,22-24,26-29,32-33
 
@@ -176,7 +176,7 @@ Only two lines are displayed, and both are also highlighted.  If
 an external change to ``src/authorization/tutorial/__init__.py``
 removes a line at the current line 10, then
 only the line number reference 24-25 in the ``:lines:`` option
-needs to be substracted 1 to be like this::
+needs to be decremented by 1 to be like this::
 
     :lines: 23-24
 
