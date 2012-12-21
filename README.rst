@@ -87,27 +87,24 @@ and the source files that are modified on each chapter:
 +--------------------+----------------------------+--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
 
 
-If a source file is modified, the modifications may need to
-be propagated to the snapshot for the next chapters.
+If an external change is merged to a source file in one of
+the folders, in most cases the change needs to merged to that
+file in the folders for subsequent chapters.
+
+If the external change consists of one or more lines being added
+or deleted in a source file, some
+line number references to that file in the documentation might
+need to be updated.
 
 References
 ==========
-The documentation files refer to the tutorial source files in two
-ways:
 
-#. Listing the content of a source file by using a `literalinclude`
-   Sphinx directive, along with either of both of these options:
+Listing the content of a source file is done with the
+`literalinclude` Sphinx directive, along these options:
 
-    - `lines` to select specific lines to display.
+- `lines` to select specific lines to display.
 
-    - `emphasize-lines` to highlight the added or edited lines.
-
-#. Refering to specific lines in a listing, like "line 2 imports
-   the docutils module" or "lines 13-15 define a function".
-
-If one or more lines are added or deleted in a source file, some
-line number references to that file in the documentation might
-need to be updated.
+- `emphasize-lines` to highlight the added or edited lines.
 
 Operation
 =========
