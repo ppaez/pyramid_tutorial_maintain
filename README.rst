@@ -99,13 +99,19 @@ need to be updated.
 References
 ==========
 
-Listing the content of a source file is done with the
-`literalinclude` Sphinx directive, along these options:
+Listing the content of a source file is done by using the
+`literalinclude` Sphinx directive in the documentation
+file, along with these options:
 
-- `lines` to select specific lines to display.
+- ``:lines: <line references>`` to select specific lines to display.
 
-- `emphasize-lines` to highlight the added or edited lines.
+- ``:emphasize-lines: <line references>`` to highlight the
+  added or edited lines.
 
+``<line references>`` is a comma-separated list of line numbers
+or ranges, like 2-3,7,31-40.
+Let's see how these line references are modified as a result of external
+changes to a source file.
 The following example is from ``docs/tutorials/wiki2/definingviews.rst``::
 
     It's time for a major change.  Open ``tutorial/tutorial/views.py`` and edit it to look like the following:
@@ -117,7 +123,8 @@ The following example is from ``docs/tutorials/wiki2/definingviews.rst``::
 
     (The highlighted lines are the ones that need to be added or edited.)
 
-If an external change adds a new line at the current line 8, the line
+If an external change to ``src/views/tutorial/views.py`` adds a new
+line at the current line 8, the line
 number references 12 and 15-70 in the ``:emphasize-lines:`` option
 need to be added 1 like this::
 
@@ -135,7 +142,8 @@ This other example is from ``docs/tutorials/wiki2/authorization.rst``::
 
     (Only the highlighted lines need to be added.)
 
-If the external change adds a new line at the current lines 7 and 26,
+If the external change to ``src/authorization/tutorial/__init__.py``
+adds a new line at the current lines 7 and 26,
 the line number references 7, 21-23 and 25- in the ``:emphasize-lines:``
 option need to be added 1, while the line number references -27 and
 30-31 need to be added 2 like this::
@@ -165,7 +173,8 @@ This example is from ``docs/tutorials/wiki2/authorization.rst``::
     (Only the highlighted line needs to be added.)
 
 Only two lines are displayed, and both are also highlighted.  If
-an external change removes a line at the current line 10, then
+an external change to ``src/authorization/tutorial/__init__.py``
+removes a line at the current line 10, then
 only the line number reference 24-25 in the ``:lines:`` option
 needs to be substracted 1 to be like this::
 
