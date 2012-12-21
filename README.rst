@@ -19,8 +19,8 @@ process, which may eventually be automated.
 Organization
 ============
 
-The tutorial user documentation in HTML, PDF, epub format is produced
-from two sets of files:
+The tutorial user documentation in HTML, PDF, epub format is generated
+by `Sphinx`__ from two sets of files:
 
   - Source files. They constitute the wiki web application
     being developed.  Most files start from a `Pyramid`
@@ -37,6 +37,8 @@ from two sets of files:
     the docutils module" or "lines 13-15 define a function".
     They are in `reST` format and there is one ``.rst`` file
     per chapter.
+
+__ http://sphinx-doc.org
 
 These files are located under
 ``docs/tutorials/wiki`` and ``docs/tutorials/wiki2`` in the
@@ -63,28 +65,28 @@ result from the scaffold are not modified in the tutorial.
 The following table shows the folder - chapter correspondence
 and the source files that are modified on each chapter:
 
-+--------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------+
-+    Folder          |  Chapter                   |     Source files                                                                                                            |
-|                    |                            +--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
-|                    |                            | ``setup.py`` | ``__init__.py`` | ``models.py`` | ``views.py`` | ``edit.pt`` | ``login.pt`` | ``security.py`` | ``tests.py`` |
-|                    |                            |              |                 |               |              | ``view.pt`` |              |                 |              |
-+--------------------+----------------------------+--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
-| ``basiclayout/``   | Basic Layout               |   New        |   New           |   New         |   New        |             |              |                 |   New        |
-|                    |                            |              |                 |               |              |             |              |                 |              |
-+--------------------+----------------------------+--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
-| ``models/``        | Defining the Domain Model  |   Modified   |                 |   Modified    |              |             |              |                 |              |
-|                    |                            |              |                 |               |              |             |              |                 |              |
-+--------------------+----------------------------+--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
-| ``views/``         | Defining Views             |   Modified   |                 |               |   Modified   |   New       |              |                 |              |
-|                    |                            |              |                 |               |              |             |              |                 |              |
-+--------------------+----------------------------+--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
-| ``authorization/`` | Adding Authorization       |              |   Modified      |               |   Modified   |   Modified  |   New        |   New           |              |
-|                    |                            |              |                 |               |              |             |              |                 |              |
-|                    |                            |              |                 |               |              |             |              |                 |              |
-+--------------------+----------------------------+--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
-| ``tests/``         | Adding Tests               |   Modified   |                 |               |              |             |              |                 |   Modified   |
-|                    |                            |              |                 |               |              |             |              |                 |              |
-+--------------------+----------------------------+--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
++----------------------------+--------------------+-----------------------------------------------------------------------------------------------------------------------------+
+|  Chapter                   +    Folder          |     Source files                                                                                                            |
+|                            |                    +--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
+|                            |                    | ``setup.py`` | ``__init__.py`` | ``models.py`` | ``views.py`` | ``edit.pt`` | ``login.pt`` | ``security.py`` | ``tests.py`` |
+|                            |                    |              |                 |               |              | ``view.pt`` |              |                 |              |
++----------------------------+--------------------+--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
+| Basic Layout               | ``basiclayout/``   |   New        |   New           |   New         |   New        |             |              |                 |   New        |
+|                            |                    |              |                 |               |              |             |              |                 |              |
++----------------------------+--------------------+--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
+| Defining the Domain Model  | ``models/``        |   Modified   |                 |   Modified    |              |             |              |                 |              |
+|                            |                    |              |                 |               |              |             |              |                 |              |
++----------------------------+--------------------+--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
+| Defining Views             | ``views/``         |   Modified   |                 |               |   Modified   |   New       |              |                 |              |
+|                            |                    |              |                 |               |              |             |              |                 |              |
++----------------------------+--------------------+--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
+| Adding Authorization       | ``authorization/`` |              |   Modified      |               |   Modified   |   Modified  |   New        |   New           |              |
+|                            |                    |              |                 |               |              |             |              |                 |              |
+|                            |                    |              |                 |               |              |             |              |                 |              |
++----------------------------+--------------------+--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
+| Adding Tests               | ``tests/``         |   Modified   |                 |               |              |             |              |                 |   Modified   |
+|                            |                    |              |                 |               |              |             |              |                 |              |
++----------------------------+--------------------+--------------+-----------------+---------------+--------------+-------------+--------------+-----------------+--------------+
 
 
 If an external change is merged to a source file in one of
@@ -100,13 +102,15 @@ References
 ==========
 
 Listing the content of a source file is done by using the
-`literalinclude` Sphinx directive in the documentation
+Sphinx `literalinclude`__ directive in the documentation
 file, along with these options:
 
 - ``:lines: <line references>`` to select specific lines to display.
 
 - ``:emphasize-lines: <line references>`` to highlight the
   added or edited lines.
+
+__ http://sphinx-doc.org/markup/code.html#includes
 
 ``<line references>`` is a comma-separated list of line numbers
 or ranges, like 2-3,7,31-40.
