@@ -106,6 +106,75 @@ Listing the content of a source file is done with the
 
 - `emphasize-lines` to highlight the added or edited lines.
 
+The following example is from ``docs/tutorials/wiki2/definingviews.rst``::
+
+    It's time for a major change.  Open ``tutorial/tutorial/views.py`` and edit it to look like the following:
+
+    .. literalinclude:: src/views/tutorial/views.py
+    :linenos:
+    :language: python
+    :emphasize-lines: 1-7,12,15-70
+
+    (The highlighted lines are the ones that need to be added or edited.)
+
+If an external change adds a new line at the current line 8, the line
+number references 12 and 15-70 in the ``:emphasize-lines:`` option
+need to be added 1 like this::
+
+    :emphasize-lines: 1-7,13,16-71
+
+This other example is from ``docs/tutorials/wiki2/authorization.rst``::
+
+    Our ``tutorial/tutorial/__init__.py`` will look something like this
+    when we're done:
+
+    .. literalinclude:: src/authorization/tutorial/__init__.py
+    :linenos:
+    :emphasize-lines: 2-3,7,21-23,25-27,30-31
+    :language: python
+
+    (Only the highlighted lines need to be added.)
+
+If the external change adds a new line at the current lines 7 and 26,
+the line number references 7, 21-23 and 25- in the ``:emphasize-lines:``
+option need to be added 1, while the line number references -27 and
+30-31 need to be added 2 like this::
+
+    :emphasize-lines: 2-3,8,22-24,26-29,32-33
+
+If the new line 7 is not blank and is part of what the user needs
+to add, then that line needs to be included in the line number
+reference 7 by converting it to 7-8::
+
+    :emphasize-lines: 2-3,7-8,22-24,26-29,32-33
+
+The ``:emphasize-lines:`` option refers to the lines that are displayed
+and in some cases they do not need to be changed.
+This example is from ``docs/tutorials/wiki2/authorization.rst``::
+
+    Open ``tutorial/tutorial/__init__.py`` and add a ``root_factory``
+    parameter to our :term:`Configurator` constructor, that points to
+    the class we created above:
+
+    .. literalinclude:: src/authorization/tutorial/__init__.py
+    :lines: 24-25
+    :linenos:
+    :emphasize-lines: 2
+    :language: python
+
+    (Only the highlighted line needs to be added.)
+
+Only two lines are displayed, and both are also highlighted.  If
+an external change removes a line at the current line 10, then
+only the line number reference 24-25 in the ``:lines:`` option
+needs to be substracted 1 to be like this::
+
+    :lines: 23-24
+
+the line number reference 2 in the ``:emphasize-lines:`` option
+remains unaffected.
+
+
 Operation
 =========
 
@@ -174,7 +243,8 @@ Merge changes in the scaffold
 
 The following script renders the `alchemy` scaffold into
 a temporary path, it compares each file in the rendered scaffold
-against the corresponding file in the SQL tutorial, and then opens
+against the corresponding file in the ``basiclayout`` folder
+of the SQL tutorial, and then opens
 vim with one tab for each file that has differences between the
 rendered scaffold  and the SQL tutorial::
 
