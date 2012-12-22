@@ -98,8 +98,8 @@ or deleted in a source file, some
 line number references to that file in the documentation might
 need to be updated.
 
-References
-==========
+Line number references
+======================
 
 Listing the content of a source file is done by using the
 Sphinx `literalinclude`__ directive in the documentation
@@ -188,25 +188,25 @@ the line number reference 2 in the ``:emphasize-lines:`` option
 remains unaffected.
 
 
-Operation
-=========
+Changes in the scaffold
+=======================
 
 If one or more files in the `alchemy` or `zodb` scaffolds are
-modified, those changes need to be applied into the tutorial
+modified, those changes need to be merged into the tutorial
 initial files:
 
 #. Render that scaffold into a temporary area, using `tutorial`
    as the project name.
 
 #. Compare the rendered scaffold folder  against the `basiclayout`
-   folder of the corresponding tutorial path.
+   folder of the corresponding tutorial.
 
 #. For each updated file of the scaffold:
 
    #. Merge the changes into the corresponding file in the
       `basiclayout` folder.
 
-   #. If one ore more lines added or deleted, determine
+   #. If one ore more lines are added or deleted, determine
       if any displayed lines, emphasized lines, or line
       references are affected, and adjust them in the
       `basiclayout.rst` documentation file.
@@ -217,7 +217,7 @@ initial files:
    #. Merge the changes into the file in the `models`
       folder.
 
-   #. If one ore more lines added or deleted, determine
+   #. If one ore more lines are added or deleted, determine
       if any displayed lines, emphasized lines, or line
       references are affected, and adjust them in the
       `definingmodels.rst` documentation file.
@@ -230,7 +230,7 @@ initial files:
 Conventions
 ===========
 
-- Use line numbers in code lisings with the `linenos` option,
+- Use line numbers in code lisings with the ``:linenos:`` option,
   except when listing a single line.
 
 - For a file that the user needs to edit:
@@ -244,6 +244,10 @@ Conventions
   - After the listing, include this legend: *(The highlighted
     lines are the ones that need to be changed.)*
 
+- If an improvement is made in one wiki tutorial, check
+  the corresponding section in the other wiki tutorial
+  and, if appropriate, make the same improvement
+  there.
 
 Tools
 =====
