@@ -1,5 +1,5 @@
 
 RST2HTML = rst2html
 
-README.html: README.rst
+index.html: index.rst
 	$(RST2HTML) $< $@
